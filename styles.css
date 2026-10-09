@@ -1,0 +1,334 @@
+@font-face {
+	font-family: "Dishonored Display";
+	src: url("../../themes/Dishonored%20-%20Dunwall/fonts/vidaloka-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Dishonored Sign";
+	src: url("../../themes/Dishonored%20-%20Dunwall/fonts/fjalla-one-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+.workspace-leaf-content[data-type="dishonored-dunwall"] .view-content {
+	padding: 0;
+	overflow: hidden;
+}
+
+.dishonored-camp-root {
+	--dishonored-brush: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cpolygon points='4,14 97,0 100,25 7,40 0,18' fill='%23f4ecdc' fill-opacity='0.55'/%3E%3C/svg%3E");
+	--dishonored-brush-lock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cpolygon points='0,8 100,2 97,40 3,33' fill='%23c49a4e' fill-opacity='0.72'/%3E%3C/svg%3E");
+	height: 100%;
+	container-type: size;
+	background: #0c100e;
+	position: relative;
+	overflow: hidden;
+}
+
+.dishonored-frame {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.dishonored-art {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background-image: var(--dishonored-camp-image, none);
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: var(--dishonored-camp-opacity, 0.8);
+	user-select: none;
+	pointer-events: none;
+}
+
+.dishonored-banner {
+	position: absolute;
+	top: 4%;
+	left: 8%;
+	right: 8%;
+	z-index: 4;
+	text-align: center;
+	pointer-events: none;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.dishonored-date {
+	color: #f4efe4;
+	font-family: "Dishonored Display", Vidaloka, Palatino, serif;
+	font-weight: 400;
+	font-synthesis: none;
+	font-size: calc(clamp(13px, 1.6cqw, 22px) + 4pt);
+	letter-spacing: 0.08em;
+}
+
+.dishonored-clock {
+	margin-top: 0.32em;
+	color: rgba(207, 195, 178, 1);
+	font-family: "Dishonored Sign", "Fjalla One", Impact, sans-serif;
+	font-size: calc(clamp(13px, 1.35cqw, 20px) + 4pt);
+	font-weight: 400;
+	font-synthesis: none;
+	letter-spacing: 0.16em;
+}
+
+.dishonored-ritual {
+	position: absolute;
+	left: 4%;
+	right: 4%;
+	top: 62%;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.15rem 1.1rem;
+	transform: translateY(-50%);
+}
+
+.dishonored-word,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word {
+	appearance: none;
+	position: relative;
+	margin: 0;
+	padding: 0.35em 0.2em;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 118% 68%;
+	box-shadow: none;
+	height: auto;
+	min-height: 0;
+	color: #cfc3b2;
+	cursor: pointer;
+	font-family: "Dishonored Sign", "Fjalla One", Impact, sans-serif;
+	font-size: clamp(15px, 2.1cqw, 28px);
+	font-weight: 400;
+	font-synthesis: none;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	transform: scale(1);
+	transition: transform 160ms ease, color 160ms ease, background-image 140ms ease;
+}
+
+.dishonored-word:hover,
+.dishonored-word:focus-visible,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word:hover,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word:focus-visible {
+	background-color: transparent;
+	background-image: var(--dishonored-brush);
+	box-shadow: none;
+	color: #fff6e8;
+	transform: scale(1.08);
+	outline: none;
+}
+
+.dishonored-word:active,
+.dishonored-word.is-press,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word:active,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word.is-press {
+	background-color: transparent;
+	background-image: var(--dishonored-brush-lock);
+	box-shadow: none;
+	color: #ffffff;
+	transform: scale(0.94);
+}
+
+.dishonored-word.is-press {
+	animation: dishonored-flash 170ms ease;
+}
+
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word.dishonored-recent__note,
+.workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word.dishonored-bookmarks__item,
+.dishonored-camp-root button.dishonored-word.dishonored-recent__note,
+.dishonored-camp-root button.dishonored-word.dishonored-bookmarks__item {
+	font-family: var(--dishonored-read, "Dishonored Display", Vidaloka, Palatino, "Palatino Linotype", serif);
+	font-size: calc(clamp(15px, 2.1cqw, 28px) * 0.5);
+	font-weight: 400;
+	font-synthesis: none;
+	text-transform: capitalize;
+	color: rgba(207, 195, 178, 0.96);
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.dishonored-haze {
+	position: absolute;
+	inset: 0;
+	z-index: 3;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.dishonored-haze::before,
+.dishonored-haze::after {
+	content: "";
+	position: absolute;
+	left: -30%;
+	top: -25%;
+	width: 170%;
+	height: 150%;
+	pointer-events: none;
+	background:
+		radial-gradient(ellipse 42% 36% at 18% 42%, rgba(198, 202, 190, 0.55), transparent 68%),
+		radial-gradient(ellipse 50% 40% at 48% 28%, rgba(168, 174, 160, 0.38), transparent 70%),
+		radial-gradient(ellipse 44% 38% at 76% 58%, rgba(186, 190, 176, 0.46), transparent 72%);
+	filter: blur(42px);
+	mix-blend-mode: screen;
+	opacity: var(--dishonored-smoke, 0.6);
+	animation: dishonored-drift calc(56s / var(--dishonored-smoke-speed, 1)) ease-in-out infinite alternate;
+	will-change: transform;
+}
+
+.dishonored-haze::after {
+	animation-duration: calc(84s / var(--dishonored-smoke-speed, 1));
+	animation-delay: -28s;
+	opacity: calc(var(--dishonored-smoke, 0.6) * 0.72);
+	background:
+		radial-gradient(ellipse 48% 34% at 30% 62%, rgba(176, 180, 168, 0.42), transparent 70%),
+		radial-gradient(ellipse 40% 32% at 62% 36%, rgba(210, 214, 202, 0.34), transparent 68%),
+		radial-gradient(ellipse 52% 42% at 88% 48%, rgba(160, 166, 152, 0.4), transparent 74%);
+}
+
+.dishonored-lower {
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	z-index: 5;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 2.6rem;
+	transform: translateX(-50%);
+}
+
+.dishonored-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.12rem;
+	margin: 0;
+	padding: 0;
+}
+
+.dishonored-column__label {
+	display: flex;
+	align-items: center;
+	gap: 0.35em;
+	margin: 0 0 0.15rem;
+	color: rgba(207, 195, 178, 0.94);
+	font-family: var(--dishonored-read, "Dishonored Display", Vidaloka, Palatino, "Palatino Linotype", serif);
+	font-size: clamp(11px, 1.2cqw, 16px);
+	font-weight: 400;
+	font-synthesis: none;
+	letter-spacing: 0.14em;
+	line-height: 1;
+	text-transform: capitalize;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+	pointer-events: none;
+}
+
+.dishonored-mark svg {
+	display: block;
+	width: 0.95em;
+	height: 0.95em;
+}
+
+.dishonored-rule {
+	width: 7.5em;
+	height: 0.7em;
+	margin: 0.1rem 0 0.15rem;
+	color: #a68448;
+	pointer-events: none;
+}
+
+.dishonored-rule svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.dishonored-bookmarks,
+.dishonored-recent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.12rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.dishonored-recent__note,
+.dishonored-bookmarks__item {
+	letter-spacing: 0.08em;
+	color: rgba(207, 195, 178, 0.96);
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.dishonored-recent__empty {
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	color: rgba(207, 195, 178, 0.45);
+	font-family: var(--dishonored-read, "Dishonored Display", Vidaloka, Palatino, "Palatino Linotype", serif);
+	font-size: clamp(6px, 0.675cqw, 9px);
+	font-weight: 400;
+	font-synthesis: none;
+	letter-spacing: 0.08em;
+	text-transform: capitalize;
+	padding: 0;
+	cursor: default;
+}
+
+@keyframes dishonored-flash {
+	0% {
+		color: #fff6e8;
+	}
+	40% {
+		color: #ffffff;
+	}
+	100% {
+		color: #fff6e8;
+	}
+}
+
+@keyframes dishonored-drift {
+	from {
+		transform: translate3d(-14%, 1%, 0);
+	}
+	to {
+		transform: translate3d(16%, -2%, 0);
+	}
+}
+
+body > .suggestion-container {
+	z-index: calc(var(--layer-modal, 200) + 20);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body .dishonored-word,
+	body .workspace-leaf-content[data-type="dishonored-dunwall"] button.dishonored-word,
+	body .dishonored-haze::before,
+	body .dishonored-haze::after {
+		animation-play-state: paused;
+		transition: none;
+	}
+}
+
+body.still-air .dishonored-word,
+body.still-air .dishonored-haze::before,
+body.still-air .dishonored-haze::after {
+	animation-play-state: paused;
+}

@@ -1,0 +1,10 @@
+{
+  "id": "dishonored-dunwall",
+  "name": "Dishonored - Dunwall",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "The Dishonored - Dunwall camp on every empty tab. The mask and the menu under it open the vault.",
+  "author": "Local",
+  "isDesktopOnly": false,
+  "repo": "https://github.com/SentientShawarma/dishonored-dunwall-plugin"
+}
