@@ -1,13 +1,13 @@
 # Dishonored - Dunwall plugin
 
-[![Get the theme](https://img.shields.io/badge/Get_the-Dunwall_theme-6b5530)](https://github.com/YOUR-USERNAME/dishonored-dunwall-theme)
+[![Get the theme](https://img.shields.io/badge/Get_the-Dunwall_theme-6b5530)](https://github.com/SentientShawarma/dishonored-dunwall-theme)
 
-This plugin is the helper for the [Dishonored - Dunwall theme](https://github.com/YOUR-USERNAME/dishonored-dunwall-theme). It adds the camp screen and its features. Install it with the theme to get the full experience.
+This plugin is the helper for the [Dishonored - Dunwall theme](https://github.com/SentientShawarma/dishonored-dunwall-theme). It adds the camp screen and its features. Install it with the theme to get the full experience.
 
 ## Install
 
 1. Install and enable this plugin from Community plugins.
-2. Install the [Dishonored - Dunwall theme](https://github.com/YOUR-USERNAME/dishonored-dunwall-theme).
+2. Install the [Dishonored - Dunwall theme](https://github.com/SentientShawarma/dishonored-dunwall-theme).
 3. Go to Settings, then Appearance, and set the CSS theme to Dishonored - Dunwall.
 
 ## What the plugin adds
